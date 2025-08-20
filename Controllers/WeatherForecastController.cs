@@ -20,7 +20,7 @@ namespace LineZyAPI.Controllers
         }
 
         [HttpGet(Name = "GetWeatherForecast")]
-        [Authorize(Policy = "RequireCustomer")]
+        [Authorize(Policy = "RequireAdmin")]
         public IEnumerable<WeatherForecast> Get()
         {
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
